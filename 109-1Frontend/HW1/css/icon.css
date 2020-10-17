@@ -1,0 +1,76 @@
+.circle {
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    display: inline-block;
+    border-style: solid;
+    border-width: 3px;
+    border-color: #808080;
+}
+
+.rounded-rectangle {
+    width: 65px;
+    height: 65px;
+    display: inline-block;
+    border-color: #808080;
+    border-radius: 30%;
+    border-style: solid;
+    border-width: 3px;
+}
+
+.i {
+    background-image: url('../img/icon-list.png');
+    /* background-size: cover; */
+}
+/* 第一列 */
+.i-person {
+    background-position: top 9.1% left 8.6%;
+}
+.i-phone {
+    background-position: top 9.1% left 35.6%;
+}
+.i-message {
+    background-position: top 8.6% left 63.2%;
+}
+.i-clock{
+    background-position: top 9.1% left 90.5%;
+}
+/* 第二列 */
+.i-music {
+    background-position: top 36% left 9.1%;
+}
+.i-photo {
+    background-position: top 36.5% left 35.8%;
+}
+.i-photocamera {
+    background-position: top 36.5% left 63.3%;
+}
+.i-videocamera {
+    background-position: top 36.3% left 90.7%;
+}
+/* 第三列 */
+.i-webcam {
+    background-position: top 64.2% left 8.6%;
+}
+.i-microphone {
+    background-position: top 63.8% left 36%;
+}
+.i-trashcan {
+    background-position: top 63.8% left 63.6%;
+}
+.i-find {
+    background-position: top 63.8% left 90.2%;
+}
+/* 第四列 */
+.i-location {
+    background-position: top 91.4% left 8.5%;
+}
+.i-setting {
+    background-position: top 91.4% left 35.8%;
+}
+.i-speaker {
+    background-position: top 91.3% left 63.9%;
+}
+.i-note {
+    background-position: top 91.3% left 90.8%;
+}
