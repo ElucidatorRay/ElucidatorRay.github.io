@@ -1,0 +1,174 @@
+body{
+    margin: 0;
+}
+.cell_back {
+    background-color: black;
+    width: 550px;
+    height: 1140px;
+}
+/* Background style */
+.BG_test{
+    background-image: url('../img/BG_test.png');
+    width: 540px;
+    height: 960px;
+    background-size: 540px 960px;
+    position: relative;
+    margin-left: 5px;
+    display: inline-block;
+}
+.BG {
+    background-image: url('../img/BG.png');
+    width: 540px;
+    height: 960px;
+    background-size: 540px 960px;
+    position: relative;
+    margin-left: 5px;
+    display: inline-block;
+}
+/* Round icon */
+.circle {
+    border-radius: 50%;
+}
+/* Square icon */
+.square {
+    border-radius: 0%;
+}
+/* rounded rectangle */
+.rounded-rectangle {
+    border-radius: 22%;
+}
+/* style for trademark zone */
+.trademark {
+    margin: 0;
+    width: 550px;
+    height: 100px;
+    display: inline-block;
+}
+/* style for icon */
+.icon {
+    margin: 0;
+    display: inline-block;
+}
+.sony {
+    color: silver;
+    margin: 0;
+    padding-top: 30px;
+    font-size: 40px;
+}
+/* style for word */
+.name_1 {
+    margin: -11px 0px 0px 27px;
+    color: white;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 20px;
+}
+.name_2 {
+    margin: -22px 0px 0px 40px;
+    color: white;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 20px;
+}
+/* first row */
+.PS {
+    /* PS app */
+    size: 72px 72px;
+    background-image: url('../img/PS.png');
+    background-size: 72px 72px;
+    background-position: center;
+    position: relative;
+    top: 59px;
+    left: 24px;
+    width: 72px;
+    height: 72px;
+}
+.chrome {
+    /* Google Chrome */
+    background-image: url('../img/Chrome.png');
+    background-size: 72px 72px;
+    background-position: center;
+    position: relative;
+    top: 60px;
+    left: 53px;
+    width: 72px;
+    height: 72px;
+}
+.ToS {
+    /* Tower of savior app */
+    background-image: url('../img/ToS.png');
+    background-position: center;
+    background-size: 77px 78px;
+    left: 79.5px;
+    top: 62px;
+    width: 77px;
+    height: 78px;
+    position: relative;
+}
+.neko {
+    /* nyanko daisensou */
+    background-image: url('../img/neko.png');
+    background-size: 73px 73px;
+    background-position: center;
+    position: relative;
+    left: 106px;
+    top: 59px;
+    width: 72px;
+    height: 72px;
+}
+.FF {
+    /* Free Fire */
+    background-image: url('../img/free-fire.png');
+    background-size: 77px 78px;
+    background-position: center;
+    position: relative;
+    top: 62px;
+    left: 132px;
+    width: 78px;
+    height: 78px;
+}
+/* second row */
+.line {
+    /* line */
+    background-image: url('../img/LINE.png');
+    background-position: center;
+    background-size: 62px 62px;
+    border-radius: 9%;
+    position: relative;
+    top: 38px;
+    left: 29px;
+    width: 62px;
+    height: 62px;
+}
+.FB {
+    /* FB */
+    background-image: url('../img/FB.png');
+    background-position: center;
+    background-size: 71px 71px;
+    position: relative;
+    top: 41px;
+    left: 63px;
+    width: 72px;
+    height: 72px;
+}
+.Slader {
+    /* Slader */
+    background-image: url('../img/slader.png');
+    background-position: center;
+    background-size: 72px 72px;
+    position: relative;
+    top: 42px;
+    left: 92px;
+    width: 72px;
+    height: 72px;
+}
+
+/* class for position testing */
+.test {
+    background-color: rgba(255, 0, 0, 0.5);
+    position: relative;
+    top: 42px;
+    left: 92px;
+    width: 72px;
+    height: 72px;
+}
