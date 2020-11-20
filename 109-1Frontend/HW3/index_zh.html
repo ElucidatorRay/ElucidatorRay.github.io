@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>HW3</title>
+    <link rel="stylesheet" href="./CSS/index.css">
+    <!-- bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+
+<body class="alert-info">
+    <!-- navigation bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-default fixed-top">
+        <a class="navbar-brand" href="#">快速移動</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="./index_zh.html">回到首頁<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        個人作品集
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="./Portfolio.html#game">Micro battle 3</a>
+                        <a class="dropdown-item" href="./Portfolio.html#dehazing">影像除霧</a>
+                        <a class="dropdown-item" href="./Portfolio.html#som">SOM分類</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        語言\Language
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="./index_zh.html">繁體中文</a>
+                        <!-- <a class="dropdown-item" href="">English</a> -->
+                        <a class="dropdown-item" href="">待補充</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- 分隔navbar和內容用的空白div -->
+    <div style="height: 75px;"></div>
+    <!-- Head block -->
+    <div class="container-fluid alert-info HEAD">
+        <div class="row" style="height: 250px">
+            <!-- 大頭貼 -->
+            <div class="col-1"></div>
+            <div class="col-3">
+                <img src="./img/頭像.jpg" style="height: 250px; width: 250px; border-radius: 50%;">
+            </div>
+            <!-- 姓名系級 -->
+            <div class="col-8">
+                <div class="row">
+                    <h2>謝昌諭</h2>
+                </div>
+                <div class="row">
+                    <p>台大生工系 大四 (BSE)</p>
+                </div>
+                <!-- contact me -->
+                <div class="row">
+                    <h5>聯絡資訊 :</h5>
+                </div>
+                <!-- email -->
+                <div class="row">
+                    <p>Email : <a href="mailto:darkrepulser.ray@gmail.com">darkrepulser.ray@gmail.com</a></p>
+                </div>
+                <!-- cellphone -->
+                <div class="row">
+                    <p>手機 : XXXXXXXXXX</p>
+                </div>
+                <!-- FB github icon -->
+                <div class="row">
+                    <a href="https://www.facebook.com/rayray.hsieh"><img src="./img/FB.png" alt="FB"
+                            class="contact_icon"></a>
+                    <a href="https://github.com/ElucidatorRay">
+                        <div class="GIT"></div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br><br>
+    <!-- self introduction -->
+    <div class="container bg-dark text-white c_border">
+        <!-- title of self introduction -->
+        <div class="row">
+            <h3>自我介紹:</h3>
+        </div>
+        <!-- content of self introduction -->
+        <div class="row">
+            <p>
+                &emsp;&emsp;我對於計算機領域很有興趣，大學期間花了相當多的時間修習相關課程。由於有時無法同時修習原本系所
+                的課程選修，因此預計以五年時間完成大學學位，以完整修習希望學習的課程。多數時候我會自行利用線上資源學習，
+                也因此時常鍛鍊查找資料、閱讀官方文件的能力。<br>
+                &emsp;&emsp;目前大學部專題為電腦視覺與空氣品質的時空間分析兩個項目。前者做影像除霧(Dehazing)，後者則是做
+                利用自組織映射(SOM)分類空氣品質不良日下的氣象因子。詳細請見作品集頁面。
+            </p>
+        </div>
+    </div>
+    <br><br>
+    <!-- Class -->
+    <div class="container bg-dark text-white c_border">
+        <div class="row">
+            <h3>大學修習課程:</h3>
+        </div>
+        <div class="row">
+            <div class="container">
+                <table class="bg-dark" style="width: 100%">
+                    <tr>
+                        <th style="width: 6%;"></th>
+                        <th style="width: 47%;">本系必修</th>
+                        <th style="width: 47%;">專業選修</th>
+                    </tr>
+                    <tr>
+                        <th>大一</th>
+                        <td>普物、普化、微積分、生態學</td>
+                        <td>無</td>
+                    </tr>
+                    <tr>
+                        <th>大二</th>
+                        <td>工程力學、工程數學、計算機應用與程式語言、</td>
+                        <td>離散數學、資料結構、計算機概論、計算機程式設計</td>
+                    </tr>
+                    <tr>
+                        <th>大三</th>
+                        <td>環境系統分析、生態工程、空間資訊、流體力學</td>
+                        <td>機器學習、電路學、微分方程、線性代數、電磁學、交換電路邏輯設計</td>
+                    </tr>
+                    <tr>
+                        <th>大四上</th>
+                        <td>環境化學、渠道水力學、土壤力學、</td>
+                        <td>電腦網路導論、專題研究</td>
+                    </tr>
+                </table>
+                <center>
+                    <p style="color: chartreuse;font-size: 20px;">以下為未來規劃</p>
+                </center>
+                <table class="bg-dark text-warning" style="width: 100%;">
+                    <tr>
+                        <th style="width: 6%;">大四下</th>
+                        <td style="width: 47%;">統計學、水文學、實驗</td>
+                        <td style="width: 47%;">機率與統計、專題研究、演算法</td>
+                    </tr>
+                    <tr>
+                        <th>大五</th>
+                        <td>環境工程、水土保持工程、水資源工程</td>
+                        <td>密碼學導論、計算機結構、深度學習於電腦視覺</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <br><br>
+    <!-- Portfolio -->
+    <div class="container bg-dark text-white c_border">
+        <div class="row">
+            <h3>作品集</h3>
+        </div>
+        <div class="row">
+            <!-- <p>(點選對應連結，查看更多細節)</p> -->
+        </div>
+        <div class="row">
+            <!-- pygame__Micro_battle -->
+            <div class="col-4">
+                <center>
+                    <div class="card" style="width: 90%;">
+                        <img src="./img/Micro_battle.png" class="card-img-top" alt="..."
+                            style="background-color: rgb(191,128,64);">
+                        <div class="card-body text-body">
+                            <h5 class="card-title">Micro Battle 3</h5>
+                            <p class="card-text">pygame套件實作的小遊戲</p>
+                            <a href="./Portfolio.html#game" class="btn btn-primary">前往介紹頁面</a>
+                        </div>
+                    </div>
+                </center>
+            </div>
+            <!-- Dehazing -->
+            <div class="col-4">
+                <center>
+                    <div class="card" style="width: 90%;">
+                        <img src="./img/DH.png" class="card-img-top" alt="...">
+                        <div class="card-body text-body">
+                            <h5 class="card-title">Dehazing</h5>
+                            <p class="card-text">以機器學習為基礎的影像除霧</p>
+                            <a href="./Portfolio.html#dehazing" class="btn btn-primary">前往介紹頁面</a>
+                        </div>
+                    </div>
+                </center>
+            </div>
+            <!-- SOM -->
+            <div class="col-4">
+                <center>
+                    <!-- 此處參考 -->
+                    <div class="card" style="width: 90%;">
+                        <img src="./img/som.png" class="card-img-top" alt="...">
+                        <div class="card-body text-body">
+                            <h5 class="card-title">SOM分類</h5>
+                            <p class="card-text">使用自組織映射分類空氣品質不良日之氣象因子</p>
+                            <a href="./Portfolio.html#som" class="btn btn-primary">前往介紹頁面</a>
+                        </div>
+                    </div>
+                </center>
+            </div>
+
+        </div>
+        <div class="row"><br></div>
+    </div>
+
+    <br><br><br><br><br><br>
+    <div>
+
+    </div>
+    <!-- link to top of site -->
+    <div class="container-fluid fixed-bottom" style="height: 100px;">
+        <a href="#top">
+            <div class="inlineB return_top"></div>
+        </a>
+    </div>
+    <!-- bootstrap需要的js檔 -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

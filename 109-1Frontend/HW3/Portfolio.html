@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+
+    <!-- bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <!-- CSS-self -->
+    <link rel="stylesheet" href="./CSS/Portfolio.css">
+</head>
+
+<body class="alert-info">
+    <!-- navigation bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-default fixed-top">
+        <a class="navbar-brand" href="#">快速移動</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="./index_zh.html">回到首頁<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        個人作品集
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="./Portfolio.html#game">Micro battle 3</a>
+                        <a class="dropdown-item" href="./Portfolio.html#dehazing">影像除霧</a>
+                        <a class="dropdown-item" href="./Portfolio.html#som">SOM分類</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        語言\Language
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="">繁體中文</a>
+                        <!-- <a class="dropdown-item" href="">English</a> -->
+                        <a class="dropdown-item" href="">待補充</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- 分隔navbar和內容用的空白div -->
+    <div style="height: 75px;"></div>
+    <!-- HEAD -->
+    <div class="container">
+        <!-- Title -->
+        <div class="row">
+            <h1>作品集</h1>
+        </div>
+        <!-- id link -->
+        <div class="row">
+            <h4>快速通道 :</h4>
+        </div>
+        <div class="row" id="index">
+            <div class="col-3 text-white" style="background-color: lightslategray;font-size: 20px;">
+                <ol>
+                    <a href="#game">
+                        <li>Micro battle 3</li>
+                    </a>
+                    <a href="#dehazing">
+                        <li>Dehazing</li>
+                    </a>
+                    <a href="#som">
+                        <li>SOM</li>
+                    </a>
+                </ol>
+                <p class="text-warning">To be continue!!!</p>
+            </div>
+        </div>
+    </div>
+    <br><br>
+    <!-- Micro battle 3 -->
+    <div class="container bg-dark text-white c_border" id="game">
+        <!-- title -->
+        <div class="row">
+            <h1>Micro battle</h1>
+        </div>
+        <!-- Introduction -->
+        <div class="row">
+            <p>
+                &emsp;&emsp;參考在手機平台發行的同名遊戲(點擊<a
+                    href="https://play.google.com/store/apps/details?id=com.donutgames.microbattles">"這裡"</a>支持正版)
+                並嘗試使用python的pygame套件實作在PC上。製作出發點是希望可以自由添加想要的功能以及練習pygame的使用。
+                遊戲特點是玩家雙方各操作單邊角色射擊、躲避，最先取得5分者獲勝。將來預計嘗試實作的遊戲AI，使其成為可以單人遊
+                玩的遊戲。以下呈現部分遊戲畫面。
+            </p>
+        </div>
+        <!-- game screenshot -->
+        <div class="row">
+            <div class="col-2"></div>
+            <div class="col-8">
+                <div class="carousel slide" data-ride="carousel" style="width: 100%;">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="./img/game1.jpg" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./img/game2.jpg" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./img/game3.jpg" class="d-block w-100">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-2"></div>
+        </div>
+        <br>
+        <div class="row">
+            <!-- source code link & Warning-->
+            <p>
+                <span style="font-size: 20px;background-color: red;">請大家務必支持正版遊戲!!!</span>
+            </p>
+        </div>
+    </div>
+    <br><br><br>
+    <!-- Dehazing -->
+    <div class="container bg-dark text-white c_border" id="dehazing">
+        <!-- title -->
+        <div class="row">
+            <h1>Dehazing</h1>
+        </div>
+        <!-- Introduction -->
+        <div class="row">
+            <p>
+                &emsp;&emsp;大四上專題研究的項目，利用機器學習訓練可以移除圖像帶有妨礙識別的霧(haze)。基本想法是將有霧的影像
+                (hazy image)作為輸入丟進神經網路，輸出為除霧後的結果(dehazed result)。以下呈現除霧前後的成果，以NTIRE2020的
+                圖片為例，左側為hazy右側為dehazed。
+            </p>
+        </div>
+        <!-- Dehazing result -->
+        <div class="row">
+            <div class="col-2"></div>
+            <div class="col-8">
+                <img src="./img/DH.png" style="width: 100%;">
+            </div>
+            <div class="col-2"></div>
+        </div>
+        <br>
+
+    </div>
+    <br><br><br>
+    <!-- SOM -->
+    <div class="container bg-dark text-white c_border" id="som">
+        <!-- title -->
+        <div class="row">
+            <h1>自組織映射</h1>
+        </div>
+        <!-- Introduction -->
+        <div class="row">
+            <p>
+                &emsp;&emsp;大四上專題研究甲一的項目，利用環保署(TW EPA)的空氣品質資料篩選出空氣品質良日與不良日
+                (AQI大於150或小於100)的時間，將該時間點的區域氣象因子(氣溫、濕度、風速風向等)利用自組織映射
+                (Self-Orgaization-Map)進行分類。從中可以看出空氣品質的好壞所對應到的氣象條件有所不同，下圖呈現實驗結果。
+                其中分別為空氣品質良好(左)、不佳(右)的時候資料點在SOM空間中的資料點個數，淺色表示資料點多。
+            </p>
+        </div>
+        <!-- result -->
+        <div class="row">
+            <div class="col-2"></div>
+            <div class="col-8">
+                <img src="./img/som_r.png" style="width: 100%;">
+            </div>
+            <div class="col-2"></div>
+        </div>
+        <br>
+    </div>
+    <br>
+    <!-- ########################################################################################## -->
+    <!-- TO DO -->
+    <!-- ########################################################################################## -->
+    <div class="container">
+        <div class="row">
+            <h3>待更新...</h3>
+        </div>
+    </div>
+    <br><br><br>
+    <!-- link to top of site -->
+    <div class="container-fluid fixed-bottom" style="height: 100px;">
+        <a href="#top">
+            <div class="inlineB return_top"></div>
+        </a>
+    </div>
+    <!-- bootstrap需要的js檔 -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

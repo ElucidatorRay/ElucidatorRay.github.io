@@ -1,0 +1,19 @@
+a{
+    color: white;
+    text-decoration:none;
+}
+.inlineB{
+    display: inline-block;
+}
+.return_top{
+    background-image: url('../img/top.png');
+    background-size: cover;
+    position: center;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    border: solid black;
+}
+.c_border{
+    border-radius: 10px;
+}
