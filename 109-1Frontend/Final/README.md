@@ -9,3 +9,5 @@
 除基本的html、css、javascript、jQuery外沒有特別技術，開發的重心主要放在西洋棋本身規則的完善以及特殊走法的實現。
 ## 其他
 由於時間不夠，程式碼的很多地方沒有做好模塊化，但大部分有做好區分遊戲底層機制的判斷和遊戲主循環間的分離，讓程式碼可讀性增加。
+## 連結
+https://elucidatorray.github.io/109-1Frontend/Final/Chess.html
