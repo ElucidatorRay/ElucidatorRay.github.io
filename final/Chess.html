@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.79.0">
+    <title>西洋棋</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/album/">
+
+    <!-- 自己的CSS檔案 -->
+    <link rel="stylesheet" href="./CSS/chess.css">
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+</head>
+
+<body>
+    <nav class="navber navbar-expand-lg navbar-dark bg-dark">
+        <!-- Navbar標題區塊 -->
+        <div class="container-fluid">
+            <a class="navbar-brand">線上西洋棋</a>
+        </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon">123</span>
+        </button>
+        <!-- 下開式選單，選擇觀看教學、使用一般計算機、使用矩陣計算機 -->
+    </nav>
+
+    <!-- 遊戲介紹、開始選單 -->
+    <div class="container">
+        <!-- 遊戲簡介 -->
+        <section class="py-5 my-2 text-center">
+            <!-- 遊戲標題及介紹 -->
+            <h1>西洋棋</h1>
+            <p>單機雙人西洋棋。以滑鼠點擊想操移動的棋子，再點擊希望移動的位置，格子會顯示不同的顏色提示如何移動。</p>
+            <!-- 網格顏色解說 -->
+            <p>
+            <div class="white legend"></div>為白格&emsp;
+            <div class="black legend"></div>為黑格&emsp;
+            <div class="onmov legend"></div>表示選取的棋子可移動位置&emsp;
+            <div class="onatk legend"></div>表此格的棋子正遭受攻擊&emsp;
+            </p>
+            <!-- 棋子介紹 -->
+            <!-- 步兵 Pawn -->
+            <p>
+            <div class="pawn-white piece"></div>
+            <div class="pawn-black piece"></div>
+            步兵，第一步可以直走1或2格，其後1格，斜前吃子
+            </p>
+            <!-- 城堡 Rook -->
+            <p>
+            <div class="rook-white piece"></div>
+            <div class="rook-black piece"></div>
+            城堡，橫向縱向移動任意格數，吃法同走法
+            </p>
+            <!-- 主教 Bishop -->
+            <p>
+            <div class="bishop-white piece"></div>
+            <div class="bishop-black piece"></div>
+            主教，斜向移動任意格數，吃法同走法
+            </p>
+            <!-- 皇后 Queen -->
+            <p>
+            <div class="queen-white piece"></div>
+            <div class="queen-black piece"></div>
+            皇后，橫向、縱向、斜向移動任意格數，吃法同走法
+            </p>
+            <!-- 國王 -->
+            <p>
+            <div class="king-white piece"></div>
+            <div class="king-black piece"></div>
+            國王，周圍8格移動，吃法同走法
+            </p>
+            <!-- 開始按鈕 -->
+            <button id="start" class="btn btn-primary my-2">開始遊戲</button>
+        </section>
+    </div>
+    <!-- 空白、設計用 -->
+    <div class="space-vertical"></div>
+    <!-- 快速跳轉按鈕 -->
+    <a href="#game" style="display: none;"></a>
+    <!-- 遊戲區域 -->
+    <main id="game">
+        <div class="container">
+            <div class="row">
+                <!-- 棋盤顯示位置 -->
+                <div id="gameBody" class="container InlineB col-6">
+                    <!-- <div class="chess-board">
+                        <div class="row">
+                            <div id="8a" class="col white chess-grid rook-black"></div>
+                            <div id="8b" class="col black chess-grid knight-black"></div>
+                            <div id="8c" class="col white chess-grid bishop-black"></div>
+                            <div id="8d" class="col black chess-grid king-black"></div>
+                            <div id="8e" class="col white chess-grid queen-black"></div>
+                            <div id="8f" class="col black chess-grid bishop-black"></div>
+                            <div id="8g" class="col white chess-grid knight-black"></div>
+                            <div id="8h" class="col black chess-grid rook-black"></div>
+                        </div>
+                        <div class="row">
+                            <div id="7a" class="col black chess-grid pawn-black"></div>
+                            <div id="7b" class="col white chess-grid pawn-black"></div>
+                            <div id="7c" class="col black chess-grid pawn-black"></div>
+                            <div id="7d" class="col white chess-grid pawn-black"></div>
+                            <div id="7e" class="col black chess-grid pawn-black"></div>
+                            <div id="7f" class="col white chess-grid pawn-black"></div>
+                            <div id="7g" class="col black chess-grid pawn-black"></div>
+                            <div id="7h" class="col white chess-grid pawn-black"></div>
+                        </div>
+                        <div class="row">
+                            <div id="6a" class="col white chess-grid"></div>
+                            <div id="6b" class="col black chess-grid"></div>
+                            <div id="6c" class="col white chess-grid"></div>
+                            <div id="6d" class="col black chess-grid"></div>
+                            <div id="6e" class="col white chess-grid"></div>
+                            <div id="6f" class="col black chess-grid"></div>
+                            <div id="6g" class="col white chess-grid"></div>
+                            <div id="6h" class="col black chess-grid"></div>
+                        </div>
+                        <div class="row">
+                            <div id="5a" class="col black chess-grid"></div>
+                            <div id="5b" class="col white chess-grid"></div>
+                            <div id="5c" class="col black chess-grid"></div>
+                            <div id="5d" class="col white chess-grid"></div>
+                            <div id="5e" class="col black chess-grid"></div>
+                            <div id="5f" class="col white chess-grid"></div>
+                            <div id="5g" class="col black chess-grid"></div>
+                            <div id="5h" class="col white chess-grid"></div>
+                        </div>
+                        <div class="row">
+                            <div id="4a" class="col white chess-grid"></div>
+                            <div id="4b" class="col black chess-grid"></div>
+                            <div id="4c" class="col white chess-grid"></div>
+                            <div id="4d" class="col black chess-grid"></div>
+                            <div id="4e" class="col white chess-grid"></div>
+                            <div id="4f" class="col black chess-grid"></div>
+                            <div id="4g" class="col white chess-grid"></div>
+                            <div id="4h" class="col black chess-grid"></div>
+                        </div>
+                        <div class="row">
+                            <div id="3a" class="col black chess-grid"></div>
+                            <div id="3b" class="col white chess-grid"></div>
+                            <div id="3c" class="col black chess-grid"></div>
+                            <div id="3d" class="col white chess-grid"></div>
+                            <div id="3e" class="col black chess-grid"></div>
+                            <div id="3f" class="col white chess-grid"></div>
+                            <div id="3g" class="col black chess-grid"></div>
+                            <div id="3h" class="col white chess-grid"></div>
+                        </div>
+                        <div class="row">
+                            <div id="2a" class="col white chess-grid pawn-white"></div>
+                            <div id="2b" class="col black chess-grid pawn-white"></div>
+                            <div id="2c" class="col white chess-grid pawn-white"></div>
+                            <div id="2d" class="col black chess-grid pawn-white"></div>
+                            <div id="2e" class="col white chess-grid pawn-white"></div>
+                            <div id="2f" class="col black chess-grid pawn-white"></div>
+                            <div id="2g" class="col white chess-grid pawn-white"></div>
+                            <div id="2h" class="col black chess-grid pawn-white"></div>
+                        </div>
+                        <div class="row">
+                            <div id="1a" class="col black chess-grid rook-white"></div>
+                            <div id="1b" class="col white chess-grid knight-white"></div>
+                            <div id="1c" class="col black chess-grid bishop-white"></div>
+                            <div id="1d" class="col white chess-grid queen-white"></div>
+                            <div id="1e" class="col black chess-grid king-white"></div>
+                            <div id="1f" class="col white chess-grid bishop-white"></div>
+                            <div id="1g" class="col black chess-grid knight-white"></div>
+                            <div id="1h" class="col white chess-grid rook-white"></div>
+                        </div>
+                    </div> -->
+                </div>
+                <!-- 棋局資訊顯示位置 -->
+                <div class="col-1"></div>
+                <div class="col-5">
+                    <div class="container">
+                        <!-- 顯示當前的執棋方、棋局的第幾手 -->
+                        <div class="row" style="height: 75px;">
+                            <h4>執棋: <span id="turn"></span></h4>
+                            <h4>已下<span id="step"> 0 </span>手</h4>
+                            <h4></h4>
+                        </div>
+                        <!-- 顯示棋譜 -->
+                        <div id="ChessRecord" class="row record">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 空白，設計用 -->
+        <div class="container">
+            <div class="row space-vertical"></div>
+            <div class="row space-vertical"></div>
+            <div class="row space-vertical"></div>
+            <div class="row space-vertical"></div>
+            <div class="row space-vertical"></div>
+        </div>
+    </main>
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous">
+        </script>
+    <!-- 自己寫的js -->
+    <script src="./JS/main.js"></script>
+    <script src="./JS/utils/chess.js"></script>
+    <!-- 跳出視窗 -->
+    <!-- 升變選擇 -->
+    <div class="modal fade" id="promotion" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">恭喜! 士兵到達對方底線了</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>請選擇升變成什麼棋子</p>
+                </div>
+                <div class="modal-footer">
+                    <button id="QueenPromote" type="button" class="btn btn-primary"
+                        data-bs-dismiss="modal">Queen</button>
+                    <button id="BishopPromote" type="button" class="btn btn-primary"
+                        data-bs-dismiss="modal">Bishop</button>
+                    <button id="RookPromote" type="button" class="btn btn-primary" data-bs-dismiss="modal">Rook</button>
+                    <button id="KnightPromote" type="button" class="btn btn-primary"
+                        data-bs-dismiss="modal">Knight</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 白方獲勝資訊 -->
+    <div class="modal fade" id="WIN_white" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">白方贏棋</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success" data-bs-dismiss="modal">確認</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 黑方獲勝資訊 -->
+    <div class="modal fade" id="WIN_black" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="staticBackdropLabel">黑方贏棋</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-success" data-bs-dismiss="modal">確認</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
