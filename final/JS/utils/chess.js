@@ -358,6 +358,7 @@ function Promotion(choose_piece) {
                 White['queen' + String(MAX)] = White[choose_piece]
                 White[choose_piece] = [-1, -1]
                 record += '=Q'
+                console.log(record)
             })
             // 升變為騎士
             $('#KnightPromote').click(() => {
@@ -424,6 +425,7 @@ function Promotion(choose_piece) {
                         return
                     }
                 })
+                console.log('knight gen ')
                 Black['knight' + String(MAX)] = Black[choose_piece]
                 Black[choose_piece] = [-1, -1]
                 record += '=N'
