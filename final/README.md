@@ -11,4 +11,4 @@
 大部分的程式為了後續修改及維護方便有做遊戲底層機制的判斷和遊戲主循環間的分離，讓程式碼可讀性增加。但是部分功能的是死線前才測試成功的，所以尚未來得及模塊化。<br>
 遊戲事件的更新部分，我採用修改各個區塊內的類別，而非每一次都重新生成所有物件，可以很大程度的減少程式運行的速度。
 ## 連結
-https://elucidatorray.github.io/final/Chess.html
+https://elucidatorray.github.io/final/index.html
