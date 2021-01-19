@@ -1,0 +1,112 @@
+.space-vertical{
+    height: 20px;
+}
+.space-horizontal{
+    width: 50px;
+}
+.InlineB{
+    display: inline-block;
+}
+/* 棋盤及網格尺寸 */
+.chess-board{
+    width: 480px;
+    height: 480px;
+}
+.board-height{
+    height: 480px;
+}
+.chess-grid{
+    display: inline-block;
+    margin: 0;
+    padding-left: 0;
+    padding-right: 0;
+    width: 60px;
+    height: 60px;
+}
+/* 遊戲解說圖式，legend為色塊，piece為棋子圖像 */
+.legend{
+    width: 14px;
+    height: 14px;
+    background-size: 14px 14px;
+    background-position: center;
+    display: inline-block;
+}
+.piece{
+    width: 20px;
+    height: 20px;
+    background-size: 20px 20px;
+    background-position: center;
+    display: inline-block;
+}
+/* 棋盤網格圖案 */
+.white{
+    background-color: rgba(255, 206, 158, 1);
+    background-size: 60px 60px;
+    background-position: center;
+}
+.black{
+    background-color: rgba(209, 139, 71, 1);
+    background-size: 60px 60px;
+    background-position: center;
+}
+/* 當前狀態網格顏色 */
+.onatk{
+    background-color: rgba(255, 0, 0, 1);
+    background-size: 60px 60px;
+    background-position: center;
+}
+.onmov{
+    background-color: rgba(0, 204, 0, 1);
+    background-size: 60px 60px;
+    background-position: center;
+}
+.onnorm{
+    
+}
+/* 棋子圖案 */
+.pawn-white{
+    background-image: url("../img/Chess/pawnW.png");
+}
+.rook-white{
+    background-image: url("../img/Chess/rookW.png");
+}
+.knight-white{
+    background-image: url("../img/Chess/knightW.png");
+}
+.bishop-white{
+    background-image: url("../img/Chess/bishopW.png");
+}
+.queen-white{
+    background-image: url("../img/Chess/queenW.png");
+}
+.king-white{
+    background-image: url("../img/Chess/kingW.png");
+}
+.pawn-black{
+    background-image: url("../img/Chess/pawnB.png");
+}
+.rook-black{
+    background-image: url("../img/Chess/rookB.png");
+}
+.knight-black{
+    background-image: url("../img/Chess/knightB.png");
+}
+.bishop-black{
+    background-image: url("../img/Chess/bishopB.png");
+}
+.queen-black{
+    background-image: url("../img/Chess/queenB.png");
+}
+.king-black{
+    background-image: url("../img/Chess/kingB.png");
+}
+/* 棋譜區塊 */
+.record{
+    height: 405px;
+    width: 100%;
+    overflow-y: scroll;
+}
+
+.test{
+    background-color: black;
+}
