@@ -141,7 +141,7 @@ function Click() {
                             // 判斷特殊情況(升變)
                             if (choose_piece.substr(0, choose_piece.length - 1) == 'pawn') {
                                 record = NameToSimp[choose_piece.substr(0, choose_piece.length - 1)] + Ori[0] + String(Ori[1])
-                                record += 'x' + Black[choose_piece][0] + String(Black[choose_piece][1])
+                                record += Black[choose_piece][0] + String(Black[choose_piece][1])
                                 Promotion(choose_piece)
                             }
                         } else if (InArray([x, y], attack)) {
